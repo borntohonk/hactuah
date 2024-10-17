@@ -1,4 +1,4 @@
-hactool currently recognizes the following keys (## represents a hexadecimal number between 00 and 1F):
+hactuah currently recognizes the following keys (## represents a hexadecimal number between 00 and 1F):
 
 ```
 master_key_##                   : The ##th Firmware Master Key. Obtainable with TrustZone code execution.

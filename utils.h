@@ -1,5 +1,5 @@
-#ifndef HACTOOL_UTILS_H
-#define HACTOOL_UTILS_H
+#ifndef HACTUAH_UTILS_H
+#define HACTUAH_UTILS_H
 
 #include <stdio.h>
 #include <stdlib.h>

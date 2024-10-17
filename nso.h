@@ -1,5 +1,5 @@
-#ifndef HACTOOL_NSO_H
-#define HACTOOL_NSO_H
+#ifndef HACTUAH_NSO_H
+#define HACTUAH_NSO_H
 #include "types.h"
 #include "utils.h"
 #include "settings.h"
@@ -30,7 +30,7 @@ typedef struct {
 
 typedef struct {
     FILE *file;
-    hactool_ctx_t *tool_ctx;
+    HACTUAH_ctx_t *tool_ctx;
     nso0_header_t *header;
     nso0_header_t *uncompressed_header;
     validity_t segment_validities[3];

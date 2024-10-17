@@ -1,6 +1,6 @@
 /config.mk
-/hactool
-/hactool.exe
+/hactuah
+/hactuah.exe
 /*.o
 /*.dll
 /bin

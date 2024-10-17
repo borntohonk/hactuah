@@ -24,7 +24,7 @@ jobs:
       run:
         shell: ${{ matrix.shell }}
 
-    name: hactool-${{ matrix.job_name }}
+    name: hactuah-${{ matrix.job_name }}
     runs-on: ${{ matrix.os }}
 
     steps:
@@ -44,5 +44,5 @@ jobs:
 
     - uses: actions/upload-artifact@v4
       with:
-        name: hactool-${{ matrix.job_name }}
-        path: hactool*
+        name: hactuah-${{ matrix.job_name }}
+        path: hactuah*

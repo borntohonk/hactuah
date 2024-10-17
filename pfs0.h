@@ -1,5 +1,5 @@
-#ifndef HACTOOL_PFS0_H
-#define HACTOOL_PFS0_H
+#ifndef HACTUAH_PFS0_H
+#define HACTUAH_PFS0_H
 
 #include "types.h"
 #include "utils.h"
@@ -35,7 +35,7 @@ typedef struct {
 typedef struct {
     pfs0_superblock_t *superblock;
     FILE *file;
-    hactool_ctx_t *tool_ctx;
+    HACTUAH_ctx_t *tool_ctx;
     validity_t superblock_hash_validity;
     validity_t hash_table_validity;
     int is_exefs;

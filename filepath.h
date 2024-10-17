@@ -1,5 +1,5 @@
-#ifndef HACTOOL_FILEPATH_H
-#define HACTOOL_FILEPATH_H
+#ifndef HACTUAH_FILEPATH_H
+#define HACTUAH_FILEPATH_H
 
 #include "types.h"
 #include "utils.h"

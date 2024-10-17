@@ -1,5 +1,5 @@
-#ifndef HACTOOL_TYPES_H
-#define HACTOOL_TYPES_H
+#ifndef HACTUAH_TYPES_H
+#define HACTUAH_TYPES_H
 
 #include <errno.h>
 #include <inttypes.h>

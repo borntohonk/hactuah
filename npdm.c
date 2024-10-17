@@ -657,7 +657,7 @@ static void fac_print(fac_t *fac, fah_t *fah) {
     printf("\n");
 }
 
-void npdm_process(npdm_t *npdm, hactool_ctx_t *tool_ctx) {
+void npdm_process(npdm_t *npdm, HACTUAH_ctx_t *tool_ctx) {
     if (tool_ctx->action & ACTION_INFO) {
         npdm_print(npdm, tool_ctx);
     }
@@ -667,7 +667,7 @@ void npdm_process(npdm_t *npdm, hactool_ctx_t *tool_ctx) {
     }
 }
 
-void npdm_print(npdm_t *npdm, hactool_ctx_t *tool_ctx) {
+void npdm_print(npdm_t *npdm, HACTUAH_ctx_t *tool_ctx) {
     printf("NPDM:\n");
     print_magic("    Magic:                          ", npdm->magic);
     printf("    MMU Flags:                      %"PRIx8"\n", npdm->mmu_flags);
@@ -734,7 +734,7 @@ void npdm_print(npdm_t *npdm, hactool_ctx_t *tool_ctx) {
 }
 
 
-void npdm_save(npdm_t *npdm, hactool_ctx_t *tool_ctx) {
+void npdm_save(npdm_t *npdm, HACTUAH_ctx_t *tool_ctx) {
     filepath_t *json_path = &tool_ctx->settings.npdm_json_path;
     if (json_path->valid != VALIDITY_VALID) {
         return;

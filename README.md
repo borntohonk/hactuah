@@ -1,15 +1,15 @@
-# hactool
+# hactuah
 
 ![License](https://img.shields.io/badge/license-ISC-blue.svg)
 
-hactool is a tool to view information about, decrypt, and extract common file formats for the Nintendo Switch, especially Nintendo Content Archives.
+hactuah is a tool to view information about, decrypt, and extract common file formats for the Nintendo Switch, especially Nintendo Content Archives.
 
 It is heavily inspired by [ctrtool](https://github.com/profi200/Project_CTR/tree/master/ctrtool).
 
 ## Usage
 
 ```
-Usage: hactool [options...] <file>
+Usage: hactuah [options...] <file>
 Options:
 -i, --info        Show file info.
                       This is the default action.
@@ -105,7 +105,7 @@ External keys can be provided by the -k/--keyset argument to the a keyset filena
 Keyset files are text files containing one key per line, in the form "key_name = HEXADECIMALKEY".
 Case shouldn't matter, nor should whitespace.
 
-In addition, if -k/--keyset is not set, hactool will check for the presence of a keyset file
+In addition, if -k/--keyset is not set, hactuah will check for the presence of a keyset file
 in $HOME/.switch/prod.keys (or $HOME/.switch/dev.keys if -d/--dev is set). If present, this file
 will automatically be loaded.
 

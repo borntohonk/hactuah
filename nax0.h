@@ -1,5 +1,5 @@
-#ifndef HACTOOL_NAX0_H
-#define HACTOOL_NAX0_H
+#ifndef HACTUAH_NAX0_H
+#define HACTUAH_NAX0_H
 
 #include <stdint.h>
 #include "types.h"
@@ -20,7 +20,7 @@ typedef struct {
 
 typedef struct {
     filepath_t base_path;
-    hactool_ctx_t *tool_ctx;
+    HACTUAH_ctx_t *tool_ctx;
     aes_ctx_t *aes_ctx;
     FILE **files;
     unsigned int num_files;

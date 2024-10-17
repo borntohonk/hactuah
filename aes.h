@@ -1,5 +1,5 @@
-#ifndef HACTOOL_AES_H
-#define HACTOOL_AES_H
+#ifndef HACTUAH_AES_H
+#define HACTUAH_AES_H
 
 #include "mbedtls/cipher.h"
 #include "mbedtls/cmac.h"

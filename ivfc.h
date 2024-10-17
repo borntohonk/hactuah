@@ -1,5 +1,5 @@
-#ifndef HACTOOL_IVFC_H
-#define HACTOOL_IVFC_H
+#ifndef HACTUAH_IVFC_H
+#define HACTUAH_IVFC_H
 
 #include "types.h"
 #include "utils.h"
@@ -90,7 +90,7 @@ typedef struct {
 typedef struct {
     romfs_superblock_t *superblock;
     FILE *file;
-    hactool_ctx_t *tool_ctx;
+    HACTUAH_ctx_t *tool_ctx;
     validity_t superblock_hash_validity;
     ivfc_level_ctx_t ivfc_levels[IVFC_MAX_LEVEL];
     uint64_t romfs_offset;

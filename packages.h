@@ -1,5 +1,5 @@
-#ifndef HACTOOL_PACKAGES_H
-#define HACTOOL_PACKAGES_H
+#ifndef HACTUAH_PACKAGES_H
+#define HACTUAH_PACKAGES_H
 
 #include "types.h"
 #include "utils.h"
@@ -65,7 +65,7 @@ typedef struct {
 
 typedef struct {
     FILE *file;
-    hactool_ctx_t *tool_ctx;
+    HACTUAH_ctx_t *tool_ctx;
     int is_modern;
     int is_mariko;
     int is_decrypted;
@@ -214,7 +214,7 @@ typedef struct {
 
 typedef struct {
     FILE *file;
-    hactool_ctx_t *tool_ctx;
+    HACTUAH_ctx_t *tool_ctx;
     unsigned int key_rev;
     uint32_t package_size;
     validity_t signature_validity;

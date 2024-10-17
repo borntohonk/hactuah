@@ -88,7 +88,7 @@ void xci_process(xci_ctx_t *ctx) {
         }
     }
 
-    hactool_ctx_t blank_ctx;
+    HACTUAH_ctx_t blank_ctx;
     memset(&blank_ctx, 0, sizeof(blank_ctx));
     blank_ctx.action = ctx->tool_ctx->action & ~(ACTION_EXTRACT | ACTION_INFO);
 

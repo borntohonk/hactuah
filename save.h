@@ -1,5 +1,5 @@
-#ifndef HACTOOL_SAVE_H
-#define HACTOOL_SAVE_H
+#ifndef HACTUAH_SAVE_H
+#define HACTUAH_SAVE_H
 #include "types.h"
 #include "settings.h"
 #include "ivfc.h"
@@ -383,7 +383,7 @@ typedef struct {
 
 struct save_ctx_t {
     FILE *file;
-    hactool_ctx_t *tool_ctx;
+    HACTUAH_ctx_t *tool_ctx;
     save_header_t header;
     validity_t header_cmac_validity;
     validity_t header_hash_validity;

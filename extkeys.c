@@ -175,7 +175,7 @@ void parse_hex_key(unsigned char *key, const char *hex, unsigned int len) {
     }
 }
 
-void extkeys_parse_titlekeys(hactool_settings_t *settings, FILE *f) {
+void extkeys_parse_titlekeys(HACTUAH_settings_t *settings, FILE *f) {
     char *key, *value;
     int ret;
 
@@ -210,7 +210,7 @@ void extkeys_parse_titlekeys(hactool_settings_t *settings, FILE *f) {
     }
 }
 
-void extkeys_initialize_settings(hactool_settings_t *settings, FILE *f) {
+void extkeys_initialize_settings(HACTUAH_settings_t *settings, FILE *f) {
     char *key, *value;
     int ret;
     nca_keyset_t *keyset = &settings->keyset;
@@ -463,11 +463,11 @@ void extkeys_initialize_settings(hactool_settings_t *settings, FILE *f) {
 }
 
 
-int settings_has_titlekey(hactool_settings_t *settings, const unsigned char *rights_id) {
+int settings_has_titlekey(HACTUAH_settings_t *settings, const unsigned char *rights_id) {
     return settings_get_titlekey(settings, rights_id) != NULL;
 }
 
-void settings_add_titlekey(hactool_settings_t *settings, const unsigned char *rights_id, const unsigned char *titlekey) {
+void settings_add_titlekey(HACTUAH_settings_t *settings, const unsigned char *rights_id, const unsigned char *titlekey) {
     if (settings_has_titlekey(settings, rights_id)) {
         fprintf(stderr, "Error: Rights ID ");
         for (unsigned int i = 0; i < 0x10; i++) {
@@ -495,7 +495,7 @@ void settings_add_titlekey(hactool_settings_t *settings, const unsigned char *ri
     memcpy(new_key->titlekey, titlekey, 0x10);
 }
 
-titlekey_entry_t *settings_get_titlekey(hactool_settings_t *settings, const unsigned char *rights_id) {
+titlekey_entry_t *settings_get_titlekey(HACTUAH_settings_t *settings, const unsigned char *rights_id) {
     for (unsigned int i = 0; i < settings->known_titlekeys.count; i++) {
         if (memcmp(settings->known_titlekeys.titlekeys[i].rights_id, rights_id, 0x10) == 0) {
             return &settings->known_titlekeys.titlekeys[i];

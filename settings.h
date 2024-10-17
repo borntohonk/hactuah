@@ -1,5 +1,5 @@
-#ifndef HACTOOL_SETTINGS_H
-#define HACTOOL_SETTINGS_H
+#ifndef HACTUAH_SETTINGS_H
+#define HACTUAH_SETTINGS_H
 #include <stdio.h>
 #include "types.h"
 #include "filepath.h"
@@ -13,7 +13,7 @@ typedef enum {
     BASEFILE_ROMFS,
     BASEFILE_NCA,
     BASEFILE_FAKE
-} hactool_basefile_t;
+} HACTUAH_basefile_t;
 
 typedef struct {
     unsigned char secure_boot_key[0x10];                 /* Secure boot key for use in key derivation. NOTE: CONSOLE UNIQUE. */
@@ -122,9 +122,9 @@ typedef struct {
     filepath_t nax0_path;
     filepath_t nax0_sd_path;
     filepath_t npdm_json_path;
-} hactool_settings_t;
+} HACTUAH_settings_t;
 
-enum hactool_file_type
+enum HACTUAH_file_type
 {
     FILETYPE_NCA,
     FILETYPE_PFS0,
@@ -157,13 +157,13 @@ enum hactool_file_type
 struct nca_ctx; /* This will get re-defined by nca.h. */
 
 typedef struct {
-    enum hactool_file_type file_type;
+    enum HACTUAH_file_type file_type;
     FILE *file;
     FILE *base_file;
-    hactool_basefile_t base_file_type;
+    HACTUAH_basefile_t base_file_type;
     struct nca_ctx *base_nca_ctx;
-    hactool_settings_t settings;
+    HACTUAH_settings_t settings;
     uint32_t action;
-} hactool_ctx_t;
+} HACTUAH_ctx_t;
 
 #endif

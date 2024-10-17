@@ -1,5 +1,5 @@
-#ifndef HACTOOL_RSA_H
-#define HACTOOL_RSA_H
+#ifndef HACTUAH_RSA_H
+#define HACTUAH_RSA_H
 
 #include "mbedtls/rsa.h"
 

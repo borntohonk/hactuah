@@ -1,5 +1,5 @@
-#ifndef HACTOOL_NPDM_H
-#define HACTOOL_NPDM_H
+#ifndef HACTUAH_NPDM_H
+#define HACTUAH_NPDM_H
 
 #include "types.h"
 #include "utils.h"
@@ -134,9 +134,9 @@ static inline npdm_aci0_t *npdm_get_aci0(npdm_t *npdm) {
     return (npdm_aci0_t *)((char *)npdm + npdm->aci0_offset);
 }
 
-void npdm_process(npdm_t *npdm, hactool_ctx_t *tool_ctx);
-void npdm_print(npdm_t *npdm, hactool_ctx_t *tool_ctx);
-void npdm_save(npdm_t *npdm, hactool_ctx_t *tool_ctx);
+void npdm_process(npdm_t *npdm, HACTUAH_ctx_t *tool_ctx);
+void npdm_print(npdm_t *npdm, HACTUAH_ctx_t *tool_ctx);
+void npdm_save(npdm_t *npdm, HACTUAH_ctx_t *tool_ctx);
 
 const char *npdm_get_proc_category(int process_category);
 void kac_print(const uint32_t *descriptors, uint32_t num_descriptors);

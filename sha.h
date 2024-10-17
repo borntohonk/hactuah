@@ -1,5 +1,5 @@
-#ifndef HACTOOL_SHA_H
-#define HACTOOL_SHA_H
+#ifndef HACTUAH_SHA_H
+#define HACTUAH_SHA_H
 
 #include "mbedtls/md.h"
 

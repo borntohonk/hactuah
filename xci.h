@@ -1,5 +1,5 @@
-#ifndef HACTOOL_XCI_H
-#define HACTOOL_XCI_H
+#ifndef HACTUAH_XCI_H
+#define HACTUAH_XCI_H
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -84,7 +84,7 @@ typedef struct {
     hfs0_ctx_t update_ctx;
     hfs0_ctx_t secure_ctx;
     hfs0_ctx_t logo_ctx;
-    hactool_ctx_t *tool_ctx;
+    HACTUAH_ctx_t *tool_ctx;
     unsigned char iv[0x10];
     int has_decrypted_header;
     unsigned char decrypted_header[0x70];

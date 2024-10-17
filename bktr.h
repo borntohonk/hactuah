@@ -1,5 +1,5 @@
-#ifndef HACTOOL_BKTR_H
-#define HACTOOL_BKTR_H
+#ifndef HACTUAH_BKTR_H
+#define HACTUAH_BKTR_H
 
 #include "types.h"
 

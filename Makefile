@@ -8,12 +8,12 @@ CFLAGS += -D_BSD_SOURCE -D_POSIX_SOURCE -D_POSIX_C_SOURCE=200112L -D_DEFAULT_SOU
 
 all:
 	$(MAKE) -C mbedtls lib
-	$(MAKE) hactool$(EXEEXT)
+	$(MAKE) hactuah$(EXEEXT)
 
 .c.o:
 	$(CC) $(INCLUDE) -c $(CFLAGS) -o $@ $<
 
-hactool$(EXEEXT): save.o sha.o aes.o extkeys.o rsa.o npdm.o bktr.o kip.o packages.o pki.o pfs0.o hfs0.o nca0_romfs.o romfs.o utils.o nax0.o nso.o lz4.o nca.o xci.o main.o filepath.o ConvertUTF.o cJSON.o
+hactuah$(EXEEXT): save.o sha.o aes.o extkeys.o rsa.o npdm.o bktr.o kip.o packages.o pki.o pfs0.o hfs0.o nca0_romfs.o romfs.o utils.o nax0.o nso.o lz4.o nca.o xci.o main.o filepath.o ConvertUTF.o cJSON.o
 	$(CC) -o $@ $^ -L $(LIBDIR) $(LDFLAGS)
 
 aes.o: aes.h types.h
@@ -65,17 +65,17 @@ ConvertUTF.o: ConvertUTF.h
 cJSON.o: cJSON.h
 
 clean:
-	rm -f *.o hactool hactool.exe
+	rm -f *.o hactuah hactuah.exe
 
 clean_full:
-	rm -f *.o hactool hactool.exe
+	rm -f *.o hactuah hactuah.exe
 	$(MAKE) -C mbedtls clean
 
 dist: clean_full
-	$(eval HACTOOLVER = $(shell grep '\bHACTOOL_VERSION\b' version.h \
+	$(eval HACTUAHVER = $(shell grep '\bHACTUAH_VERSION\b' version.h \
 		| cut -d' ' -f3 \
 		| sed -e 's/"//g'))
-	mkdir hactool-$(HACTOOLVER)
-	cp -R *.c *.h config.mk.template Makefile README.md LICENSE mbedtls hactool-$(HACTOOLVER)
-	tar czf hactool-$(HACTOOLVER).tar.gz hactool-$(HACTOOLVER)
-	rm -r hactool-$(HACTOOLVER)
+	mkdir hactuah-$(HACTUAHVER)
+	cp -R *.c *.h config.mk.template Makefile README.md LICENSE mbedtls hactuah-$(HACTUAHVER)
+	tar czf hactuah-$(HACTUAHVER).tar.gz hactuah-$(HACTUAHVER)
+	rm -r hactuah-$(HACTUAHVER)

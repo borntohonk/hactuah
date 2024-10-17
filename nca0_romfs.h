@@ -1,5 +1,5 @@
-#ifndef HACTOOL_NCA0_ROMFS_H
-#define HACTOOL_NCA0_ROMFS_H
+#ifndef HACTUAH_NCA0_ROMFS_H
+#define HACTUAH_NCA0_ROMFS_H
 
 #include "types.h"
 #include "utils.h"
@@ -36,7 +36,7 @@ typedef struct {
 typedef struct {
     nca0_romfs_superblock_t *superblock;
     FILE *file;
-    hactool_ctx_t *tool_ctx;
+    HACTUAH_ctx_t *tool_ctx;
     validity_t superblock_hash_validity;
     validity_t hash_table_validity;
     uint64_t romfs_offset;

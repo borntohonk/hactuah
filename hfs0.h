@@ -1,5 +1,5 @@
-#ifndef HACTOOL_hfs0_H
-#define HACTOOL_hfs0_H
+#ifndef HACTUAH_hfs0_H
+#define HACTUAH_hfs0_H
 
 #include "types.h"
 #include "utils.h"
@@ -27,7 +27,7 @@ typedef struct {
     FILE *file;
     uint64_t offset;
     uint64_t size;
-    hactool_ctx_t *tool_ctx;
+    HACTUAH_ctx_t *tool_ctx;
     hfs0_header_t *header;
     const char *name;
     const uint8_t *hash_suffix;

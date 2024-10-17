@@ -1,5 +1,5 @@
-#ifndef HACTOOL_KIP_H
-#define HACTOOL_KIP_H
+#ifndef HACTUAH_KIP_H
+#define HACTUAH_KIP_H
 #include "types.h"
 #include "utils.h"
 #include "settings.h"
@@ -39,13 +39,13 @@ typedef struct {
 
 typedef struct {
     FILE *file;
-    hactool_ctx_t *tool_ctx;
+    HACTUAH_ctx_t *tool_ctx;
     kip1_header_t *header;
 } kip1_ctx_t;
 
 typedef struct {
     FILE *file;
-    hactool_ctx_t *tool_ctx;
+    HACTUAH_ctx_t *tool_ctx;
     ini1_header_t *header;
     kip1_ctx_t kips[INI1_MAX_KIPS];
 } ini1_ctx_t;
