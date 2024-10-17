@@ -432,7 +432,8 @@ void kac_print(const uint32_t *descriptors, uint32_t num_descriptors) {
             case 16: /* Debug Flags. */
                 kac.has_debug_flags = 1;
                 kac.allow_debug = desc & 1;
-                kac.force_debug = (desc >> 1) & 1;
+                kac.force_debug_prod = (desc >> 1) & 1;
+                kac.force_debug = (desc >> 2) & 1;
                 break;
         }
     }
@@ -509,6 +510,7 @@ void kac_print(const uint32_t *descriptors, uint32_t num_descriptors) {
 
     if (kac.has_debug_flags) {
         printf("        Allow Debug:                %s\n", kac.allow_debug ? "YES" : "NO");
+        printf("        Force Debug Prod:           %s\n", kac.force_debug_prod ? "YES" : "NO");
         printf("        Force Debug:                %s\n", kac.force_debug ? "YES" : "NO");
     }
 }
@@ -930,12 +932,14 @@ cJSON *kac_get_json(const uint32_t *descriptors, uint32_t num_descriptors) {
             case 16: /* Debug Flags. */
                 temp = cJSON_CreateObject();
                 cJSON_AddBoolToObject(temp, "allow_debug", (desc >> 0) & 1);
-                cJSON_AddBoolToObject(temp, "force_debug", (desc >> 1) & 1);
+                cJSON_AddBoolToObject(temp, "force_debug_prod", (desc >> 1) & 1);
+                cJSON_AddBoolToObject(temp, "force_debug", (desc >> 2) & 1);
                 cJSON_AddItemToArray(kac_json, kac_create_obj("debug_flags", temp));
 
                // kac.has_debug_flags = 1;
                // kac.allow_debug = desc & 1;
-               // kac.force_debug = (desc >> 1) & 1;
+               // kac.force_debug_prod = (desc >> 1) & 1;
+               // kac.force_debug = (desc >> 2) & 1;
                 break;
         }
         temp = NULL;

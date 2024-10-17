@@ -41,6 +41,7 @@ typedef struct {
     uint32_t handle_table_size;
     int has_debug_flags;
     int allow_debug;
+    int force_debug_prod;
     int force_debug;
 } kac_t;
 
